@@ -1,0 +1,21 @@
+DECLARE
+orderno number:=1001;
+orderid number default 1002;
+ordername varchar2(40):='Sample';
+ordername2 varchar2(40) default 'Default';
+order1 constant number default 1001;
+
+BEGIN
+    orderid:=1004;
+    --order1:=1;
+    IF orderno =1002
+    THEN
+    dbms_output.put_line('PL/SQL practising');
+     dbms_output.put_line('Order no 1 ' || orderno);
+     dbms_output.put_line('Order no 2 ' || orderid);
+     dbms_output.put_line('Order no 3 ' || ordername);
+     dbms_output.put_line('Order no 4 ' || ordername2);
+     ELSE
+     dbms_output.put_line('Order no 5 ' || order1);
+     END IF;
+END;
